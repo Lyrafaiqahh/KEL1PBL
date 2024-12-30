@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Arsip.css?v=1.0.1">
+  <link rel="stylesheet" href="Arsip.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,7 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <title>Arsip Berkas Mahasiswa</title>
 </head>
 <body>
-  <header>
+<header>
+    <div class="background"></div>
     <div class="top-nav">
       <div class="logo">
         <img src="img/logo.png" alt="Logo">
@@ -85,19 +86,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <div class="right-actions">
         <div class="menu-bar">
           <ul>
-          <li class="menu-item"><a href="dashboard.html">Beranda</a></li>
+            <li class="menu-item"><a href="dashboard.html">Beranda</a></li>
             <li class="menu-item active"><a href="Arsip.php">Arsip Berkas</a></li>
             <li class="menu-item"><a href="Form.html">Form Beta</a></li>
             <li class="menu-item"><a href="FAQ.html">FAQ</a></li>
-          
           </ul>
         </div>
-        <!-- Profile Icon -->
-        <div class="profile">
-          <img src="img/profile.jpg" alt="Profile Avatar">
-        </div>
-      </div>
+  
+       <!-- Back Button as Logo -->
+     
     </div>
+      </div>
+      <div class="nav-buttons">
+        <a href="index.php" class="nav-button back-button">
+          <img src="img/logout.png" alt="Back Logo" class="back-logo">
+        </a>
+      </div>
   </header>
 
   <main class="main-content">

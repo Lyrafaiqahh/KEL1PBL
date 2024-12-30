@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     margin-top: 100px; /* Space from the top */
     overflow-x: hidden; /* Hilangkan scroll horizontal */
-    background-color: #FCFCFC;
+    background-color: #F5EFFF;
 }
 
 .main-content {
@@ -99,17 +99,6 @@ body {
 }
 
 /* Search Icon Styling */
-
-.right-actions {
-    display: flex;
-    justify-content: flex-end; /* Tempatkan di ujung kanan */
-    align-items: center; /* Vertikal sejajar */
-    gap: 20px; /* Jarak antar elemen */
-    flex-direction: row; /* Logo tetap sejajar horizontal */
-    position: fixed; /* Tetap di pojok kanan atas */
-    top: 10px; /* Jarak dari atas */
-    right: 10px; /* Jarak dari kanan */
-}
 
 
 /* Dashboard Container */
@@ -637,18 +626,19 @@ body {
 }
 
 .nav-button.back-button {
-    width: 50px; /* Sesuaikan ukuran logo */
-    height: 50px;
-    border-radius: 50%; /* Jadikan bulat */
+    width: 25px; /* Ukuran lebih kecil */
+    height: 25px; /* Ukuran lebih kecil */
     background-color: transparent; /* Hilangkan warna dasar */
-    background-image: url('img/back-logo.png'); /* Ganti dengan gambar logo */
-    background-size: cover; /* Pastikan logo memenuhi area */
+    background-image: url('img/logout.png'); /* Ganti dengan gambar logo */
+    background-size: cover; /* Pastikan gambar memenuhi area */
     background-repeat: no-repeat;
     border: none; /* Hilangkan border */
-    text-indent: -9999px; /* Sembunyikan teks */
-    overflow: hidden; /* Hindari teks overflow */
     cursor: pointer; /* Ubah kursor jadi pointer */
-    position: relative; /* Untuk penyesuaian lebih lanjut */
+    position: fixed; /* Tetapkan posisi tetap di layar */
+    top: 10px; /* Jarak dari atas */
+    right: 10px; /* Jarak dari kanan */
+    z-index: 1000; /* Pastikan elemen berada di atas */
+    transform: translate(0, 0); /* Penyesuaian tambahan jika perlu */
 }
 
 .nav-button.back-button:hover {
@@ -657,8 +647,8 @@ body {
 }
 
 .back-logo {
-    margin-left: 400px;
-    margin-right: 10px;
+    margin-left: 1350px;
+    margin-top: 25px;
 }
 
 /* Responsive Design */

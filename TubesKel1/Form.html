@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Form.css?v=1.0.1">
+  <link rel="stylesheet" href="Form.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,7 @@
 </head>
 <body>
   <header>
+    <div class="background"></div>
     <div class="top-nav">
       <div class="logo">
         <img src="img/logo.png" alt="Logo">
@@ -21,36 +22,44 @@
           <ul>
             <li class="menu-item"><a href="dashboard.html">Beranda</a></li>
             <li class="menu-item"><a href="Arsip.php">Arsip Berkas</a></li>
-            <li class="menu-item active"><a href="Form.php">Form Beta</a></li>
+            <li class="menu-item active"><a href="Form.html">Form Beta</a></li>
             <li class="menu-item"><a href="FAQ.html">FAQ</a></li>
           </ul>
         </div>
-        <div class="profile">
-          <img src="img/profile.jpg" alt="Profile Avatar">
-        </div>
-      </div>
+  
+       <!-- Back Button as Logo -->
+      
     </div>
-  </header>
+  
 
+      </div>
+      <div class="nav-buttons">
+        <a href="index.php" class="nav-button back-button">
+          <img src="img/logout.png" alt="Back Logo" class="back-logo">
+        </a>
+      </div>
+  </header>
+  
   <main>
+
     <!-- Bebas Tanggungan Jurusan -->
     <form action="Form.php" method="POST" enctype="multipart/form-data" class="upload-form">
       <div class="upload-box upload-box-jurusan">
-          <div class="upload-inner-box">
-              <div class="upload-header">
-                  <span class="text">File</span>
-                  <i class="status-icon fas fa-check-circle"></i>
-              </div>
-              <div class="upload-content">
-                  <h3>Bebas Tanggungan Jurusan</h3>
-                  <div class="upload-info">
-                      <span>PDF</span>
-                      <span>MAX 2 MB</span>
-                  </div>
-              </div>
-              <input type="file" name="jurusan_file" accept="application/pdf" required>
-              <button type="submit" class="upload-main-btn">Unggah</button>
+        <div class="upload-inner-box">
+          <div class="upload-header">
+            <span class="text">File</span>
+            <i class="status-icon fas fa-check-circle"></i>
           </div>
+          <div class="upload-content">
+            <h3>Bebas Tanggungan Jurusan</h3>
+            <div class="upload-info">
+              <span>PDF</span>
+              <span>MAX 2 MB</span>
+            </div>
+          </div>
+          <input type="file" name="uploads[]" accept="application/pdf" required>
+          <button type="submit" class="upload-main-btn">Unggah</button>
+        </div>
       </div>
     </form>
 
@@ -60,7 +69,7 @@
         <div class="upload-inner-box">
           <div class="upload-header">
             <span class="text">File</span>
-            <i class="status-icon fas fa-times-circle"></i>
+            <i class="status-icon fas fa-check-circle"></i>
           </div>
           <div class="upload-content">
             <h3>Bebas Tanggungan Perpustakaan</h3>
@@ -69,7 +78,7 @@
               <span>MAX 2 MB</span>
             </div>
           </div>
-          <input type="file" name="perpustakaan_file" accept="application/pdf" required>
+          <input type="file" name="uploads[]" accept="application/pdf">
           <button type="submit" class="upload-main-btn">Unggah</button>
         </div>
       </div>
@@ -90,14 +99,11 @@
               <span>MAX 2 MB</span>
             </div>
           </div>
-          <input type="file" name="keterangan_file" accept="application/pdf" required>
+          <input type="file" name="uploads[]" accept="application/pdf">
           <button type="submit" class="upload-main-btn">Unggah</button>
         </div>
       </div>
     </form>
   </main>
-
-  <script src="Form.js?v=<?php echo time(); ?>" defer></script>
-  <link rel="stylesheet" href="Form.css?v=<?php echo time(); ?>">
 </body>
 </html>

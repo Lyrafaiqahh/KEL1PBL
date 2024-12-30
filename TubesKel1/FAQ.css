@@ -2,15 +2,14 @@ body {
     font-family: 'Outfit', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #eff2ff;
 }
 
 .faq-title {
     text-align: center;
     font-size: 32px;
     margin: 20px 0;
-    color: #373A5D;
+    color: #5473ff;
     margin-top: 100px;
 }
 
@@ -26,6 +25,16 @@ body {
 .faq-item {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
+
+}
+
+.faq-item h3 {
+ 
+    color: #5473ff;
+}
+
+.faq-item p {
+    color: #94b7f9;
 }
 
 .faq-item:last-child {
@@ -51,7 +60,7 @@ body {
     display: none;
     padding: 10px 20px;
     font-size: 16px;
-    color: #555;
+    color: #5473ff;
     line-height: 1.6;
 }
 
@@ -65,7 +74,7 @@ body {
 
 .faq-question i {
     font-size: 14px;
-    color: #373A5D;
+    color: #5473ff;
     transition: transform 0.3s ease;
 }
 
@@ -108,7 +117,7 @@ body {
     padding: 6px 25px; /* Sesuaikan padding horizontal */
     border-radius: 60px;
     background-color: transparent;
-    color: rgb(95, 87, 141);
+    color: #94b7f9;
     font-weight: bold;
     font-size: 14px;
     white-space: nowrap; /* Mencegah teks pindah ke bawah */
@@ -120,7 +129,7 @@ body {
 /* Active Menu Item or Hover */
 .menu-item.active a,
 .menu-item a:hover {
-    background-color: #373A5D;
+    background-color: #5473ff;
     color: #fff;
     padding: 8px 50px;
     margin: 8px 0;
@@ -158,7 +167,7 @@ body {
 
 .faq-form h3 {
     margin-bottom: 10px;
-    color: #373A5D;
+    color: #5473ff;
 }
 
 .faq-form input,
@@ -175,14 +184,14 @@ body {
     padding: 10px 15px;
     margin-right: 10px;
     border: none;
-    background-color: #373A5D;
+    background-color: #5473ff;
     color: white;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .faq-form button:hover {
-    background-color: #5c5e86;
+    background-color: #7b8fcf;
 }
 
 /* Jawaban tersembunyi dengan transisi */
@@ -190,7 +199,7 @@ body {
     display: none; /* Jawaban tidak ditampilkan secara default */
     padding: 10px 20px;
     font-size: 16px;
-    color: #555;
+    color: #5473ff;
     line-height: 1.6;
     transition: all 0.3s ease; /* Tambahkan transisi untuk efek */
 }
@@ -204,7 +213,7 @@ body {
 .faq-question i {
     margin-left: 10px;
     font-size: 12px;
-    color: #373A5D;
+    color: #5473ff;
     transition: transform 0.3s ease;
 }
 
@@ -217,11 +226,41 @@ body {
 /* Keterangan di atas form input */
 .faq-prompt {
     font-size: 25px;
-    color: #373A5D;
+    color: #5473ff;
     margin-bottom: 10px;
     font-weight: bold;
     text-align: center; /* Membuat teks berada di tengah */
 }
+
+.nav-button.back-button {
+    width: 25px; /* Ukuran lebih kecil */
+    height: 25px; /* Ukuran lebih kecil */
+   
+    background-color: transparent; /* Hilangkan warna dasar */
+    background-image: url('img/logout.png'); /* Ganti dengan gambar logo */
+    background-size: cover; /* Pastikan gambar memenuhi area */
+    background-repeat: no-repeat;
+    border: none; /* Hilangkan border */
+    cursor: pointer; /* Ubah kursor jadi pointer */
+    position: fixed; /* Tetapkan posisi tetap di layar */
+    top: 10px; /* Jarak dari atas */
+    right: 10px; /* Jarak dari kanan */
+    z-index: 1000; /* Pastikan elemen berada di atas */
+    transform: translate(0, 0); /* Penyesuaian tambahan jika perlu */
+}
+
+.nav-button.back-button:hover {
+    opacity: 0.8; /* Efek hover */
+    transition: opacity 0.3s ease;
+}
+
+.back-logo {
+    margin-left: 1350px;
+    margin-top: 25px;
+}
+
+
+
 
 
 

@@ -8,11 +8,11 @@
     padding: 20px;
     margin-top: 80px; /* Berikan ruang dari bagian atas untuk navbar */
     width: 100%;
-  }
+}
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #F8F8F8;
+    background-color: #eff2ff; /* Ubah background menjadi hitam */
     background-size: cover; /* Membuat gambar menutupi seluruh halaman */
     background-position: center; /* Posisi gambar di tengah halaman */
     background-repeat: no-repeat; /* Mencegah gambar mengulang */
@@ -21,6 +21,31 @@ body {
     min-height: 100vh;
 }
 
+.nav-button.back-button {
+    width: 25px; /* Ukuran lebih kecil */
+    height: 25px; /* Ukuran lebih kecil */
+    background-color: transparent; /* Hilangkan warna dasar */
+    background-image: url('img/logout.png'); /* Ganti dengan gambar logo */
+    background-size: cover; /* Pastikan gambar memenuhi area */
+    background-repeat: no-repeat;
+    border: none; /* Hilangkan border */
+    cursor: pointer; /* Ubah kursor jadi pointer */
+    position: fixed; /* Tetapkan posisi tetap di layar */
+    top: 10px; /* Jarak dari atas */
+    right: 10px; /* Jarak dari kanan */
+    z-index: 1000; /* Pastikan elemen berada di atas */
+    transform: translate(0, 0); /* Penyesuaian tambahan jika perlu */
+}
+
+.nav-button.back-button:hover {
+    opacity: 0.8; /* Efek hover */
+    transition: opacity 0.3s ease;
+}
+
+.back-logo {
+    margin-left: 1350px;
+    margin-top: 25px;
+}
 
 /* Top Navigation Bar */
 .top-nav {
@@ -33,7 +58,6 @@ body {
     width: 60%;
     z-index: 1000;
     margin-top: -20px;
-
 }
 
 /* Logo di Pojok Kiri */
@@ -62,7 +86,7 @@ body {
     padding: 6px 25px; /* Sesuaikan padding horizontal */
     border-radius: 60px;
     background-color: transparent;
-    color: rgb(95, 87, 141);
+    color: #94b7f9;
     font-weight: bold;
     font-size: 14px;
     white-space: nowrap; /* Mencegah teks pindah ke bawah */
@@ -73,7 +97,7 @@ body {
 /* Active Menu Item or Hover */
 .menu-item.active a,
 .menu-item a:hover {
-    background-color: #373A5D;
+    background-color: #5473ff;
     color: #fff;
     padding: 8px 50px;
     margin: 8px 0;
@@ -81,7 +105,6 @@ body {
 }
 
 /* Search Icon Styling */
-
 .right-actions {
     display: flex; /* Gunakan Flexbox */
     align-items: center; /* Pastikan elemen sejajar secara vertikal */
@@ -90,7 +113,6 @@ body {
     flex-direction: row-reverse; /* Balik urutan elemen */
     transform: translate(30%, 0%); /* Geser ke kiri (-10%) dan naik ke atas (-10%) */
 }
-
 
 .profile img {
     width: 35px; /* Ukuran ikon profil */
@@ -118,7 +140,7 @@ section:hover {
 section h2 {
     text-align: center;
     margin-bottom: 10px;
-    color: #333;
+    color: #5473ff;
 }
 
 /* Formulir */
@@ -130,7 +152,7 @@ form {
 form label {
     margin: 10px 0 5px;
     font-weight: bold;
-    color: #555;
+    color: #5473ff;
 }
 
 form input,
@@ -151,7 +173,7 @@ form select:focus {
 /* Tombol Submit */
 button {
     padding: 10px;
-    background: #333;
+    background: #5473ff;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -160,9 +182,8 @@ button {
 }
 
 button:hover {
-    background: #555;
+    background: #7b8fcf;
 }
-
 
 @media (max-width: 480px) {
     h1 {
