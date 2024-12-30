@@ -1,0 +1,203 @@
+/* Resetting Margins and Padding for Basic Elements */
+body, h1, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 60%;
+    z-index: 1000;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* Menu Bar */
+.menu-bar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 0px;
+    background-color: white;
+    padding: 7px 1px;
+    border-radius: 20px;
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Menu Items */
+.menu-item a {
+    text-decoration: none;
+    padding: 6px 25px;
+    border-radius: 60px;
+    background-color: transparent;
+    color: rgb(95, 87, 141);
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Active Menu Item or Hover */
+.menu-item.active a, 
+.menu-item a:hover {
+    background-color: #373A5D;
+    color: #fff;
+    padding: 8px 50px;
+    margin: 8px 0;
+    transition: all 0.3s ease;
+}
+
+/* Search Icon Styling */
+.right-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-direction: row-reverse;
+    transform: translate(30%, 0%);
+}
+
+.profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid rgb(95, 87, 141);
+}
+
+/* Upload Form */
+.upload-container {
+    display: flex;
+    gap: 20px; /* Jarak antar form */
+    justify-content: center; /* Posisi rata tengah */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Membiarkan kotak berbentuk baris */
+}
+
+.upload-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 300px;
+    box-sizing: border-box;
+    width: calc(33.33% - 20px); /* Atur lebar kotak dengan jarak antar form */
+}
+
+.upload-inner-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+
+.upload-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.status-icon {
+    color: green;
+    font-size: 20px;
+}
+
+.upload-content h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.upload-info {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.text {
+    background-color: #ffffff;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 3px;
+    width: 30px;
+    height: 20px;
+}
+
+.upload-main-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.upload-main-btn:hover {
+    background: #0056b3;
+}
+
+/* Hover efek untuk kotak */
+.upload-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .upload-container {
+        flex-wrap: wrap; /* Kotak akan membungkus ke baris berikutnya */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .upload-box {
+        width: 100%; /* Lebar kotak menyesuaikan layar */
+    }
+}
+
+@media (max-width: 480px) {
+    .upload-box {
+        width: 100%; /* Layout pada layar kecil menjadi full width */
+    }
+}
+
+/* Background colors for specific forms */
+.upload-box-jurusan {
+    background-color: #D4F7ED;
+}
+
+.upload-box-perpustakaan {
+    background-color: #FEE0CC;
+}
+
+.upload-box-keterangan {
+    background-color: #FBE2F3;
+}
