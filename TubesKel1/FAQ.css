@@ -1,0 +1,266 @@
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eff2ff;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0;
+    color: #5473ff;
+    margin-top: 100px;
+}
+
+.faq-container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+
+}
+
+.faq-item h3 {
+ 
+    color: #5473ff;
+}
+
+.faq-item p {
+    color: #94b7f9;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f9f9fc;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #5473ff;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
+}
+
+.faq-question i {
+    font-size: 14px;
+    color: #5473ff;
+    transition: transform 0.3s ease;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Pastikan semua elemen di navbar sejajar vertikal */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 60%;
+    z-index: 1000;
+
+}
+
+/* Logo di Pojok Kiri */
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+/* Menu Bar */
+.menu-bar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 0px; /* Tambahkan jarak antar elemen */
+    background-color: white;
+    padding: 7px 1px; /* Sesuaikan padding */
+    border-radius: 20px;
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly; /* Rata elemen menu secara horizontal */
+}
+
+
+/* Menu Items */
+/* Menu Items */
+.menu-item a {
+    text-decoration: none;
+    padding: 6px 25px; /* Sesuaikan padding horizontal */
+    border-radius: 60px;
+    background-color: transparent;
+    color: #5473ff;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap; /* Mencegah teks pindah ke bawah */
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+
+/* Active Menu Item or Hover */
+.menu-item.active a,
+.menu-item a:hover {
+    background-color: #5473ff;
+    color: #fff;
+    padding: 8px 50px;
+    margin: 8px 0;
+    transition: all 0.3s ease;
+}
+
+/* Search Icon Styling */
+
+.right-actions {
+    display: flex; /* Gunakan Flexbox */
+    align-items: center; /* Pastikan elemen sejajar secara vertikal */
+    justify-content: flex-end; /* Tempatkan di ujung kanan */
+    gap: 20px; /* Beri jarak antar elemen */
+    flex-direction: row-reverse; /* Balik urutan elemen */
+    transform: translate(30%, 0%); /* Geser ke kiri (-10%) dan naik ke atas (-10%) */
+}
+
+
+.profile img {
+    width: 35px; /* Ukuran ikon profil */
+    height: 35px;
+    border-radius: 50%; /* Bikin bulat */
+    border: 2px solid rgb(95, 87, 141); /* Tambahkan border agar menonjol */
+    align-content: center;
+}
+
+.faq-form {
+    margin: 20px auto;
+    width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-form h3 {
+    margin-bottom: 10px;
+    color: #5473ff;
+}
+
+.faq-form input,
+.faq-form textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.faq-form button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    background-color: #5473ff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.faq-form button:hover {
+    background-color: #7b8fcf;
+}
+
+/* Jawaban tersembunyi dengan transisi */
+.faq-answer {
+    display: none; /* Jawaban tidak ditampilkan secara default */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #5473ff;
+    line-height: 1.6;
+    transition: all 0.3s ease; /* Tambahkan transisi untuk efek */
+}
+
+/* Saat elemen aktif */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Ikon panah */
+.faq-question i {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #5473ff;
+    transition: transform 0.3s ease;
+}
+
+/* Gaya hover untuk pertanyaan */
+.faq-question:hover {
+    background-color: #f9f9fc;
+    cursor: pointer;
+}
+
+/* Keterangan di atas form input */
+.faq-prompt {
+    font-size: 25px;
+    color: #5473ff;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center; /* Membuat teks berada di tengah */
+}
+
+.nav-button.back-button {
+    width: 25px; /* Ukuran lebih kecil */
+    height: 25px; /* Ukuran lebih kecil */
+   
+    background-color: transparent; /* Hilangkan warna dasar */
+    background-image: url('img/logout.png'); /* Ganti dengan gambar logo */
+    background-size: cover; /* Pastikan gambar memenuhi area */
+    background-repeat: no-repeat;
+    border: none; /* Hilangkan border */
+    cursor: pointer; /* Ubah kursor jadi pointer */
+    position: fixed; /* Tetapkan posisi tetap di layar */
+    top: 10px; /* Jarak dari atas */
+    right: 10px; /* Jarak dari kanan */
+    z-index: 1000; /* Pastikan elemen berada di atas */
+    transform: translate(0, 0); /* Penyesuaian tambahan jika perlu */
+}
+
+.nav-button.back-button:hover {
+    opacity: 0.8; /* Efek hover */
+    transition: opacity 0.3s ease;
+}
+
+.back-logo {
+    margin-left: 1350px;
+    margin-top: 25px;
+}
+
+
+
+
+
+

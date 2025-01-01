@@ -1,0 +1,714 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Outfit', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    flex-direction: column;
+    margin-top: 100px; /* Space from the top */
+    overflow-x: hidden; /* Hilangkan scroll horizontal */
+    background-color: #eff2ff;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* Responsif dengan membungkus konten */
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.welcome-section {
+    grid-column: 1 / -1; /* Membentang seluruh kolom */
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: -740px;
+    margin-left: 10px;
+    font-size: 18px; /* Tambahkan ukuran font lebih besar */
+    line-height: 1.6; /* Menambahkan jarak antar baris agar teks lebih nyaman dibaca */
+}
+
+
+.welcome-section h1 {
+    color: #5473ff;
+}
+
+.welcome-section p {
+    color: #94b7f9;
+    margin-top: -10px;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Pastikan semua elemen di navbar sejajar vertikal */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 60%;
+    z-index: 1000;
+    margin-top: -20px;
+}
+
+/* Logo di Pojok Kiri */
+.logo img {
+    width: 70px; /* Ganti dengan ukuran yang diinginkan */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Menu Bar */
+.menu-bar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 0px; /* Tambahkan jarak antar elemen */
+    background-color: white;
+    padding: 7px 1px; /* Sesuaikan padding */
+    border-radius: 20px;
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly; /* Rata elemen menu secara horizontal */
+}
+
+/* Menu Items */
+.menu-item a {
+    text-decoration: none;
+    padding: 6px 25px; /* Sesuaikan padding horizontal */
+    border-radius: 60px;
+    background-color: transparent;
+    color: #94b7f9;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap; /* Mencegah teks pindah ke bawah */
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Active Menu Item or Hover */
+.menu-item.active a,
+.menu-item a:hover {
+    background-color: #5473ff;
+    color: #fff;
+    padding: 8px 50px;
+    margin: 8px 0;
+    transition: all 0.3s ease;
+}
+
+/* Search Icon Styling */
+
+
+/* Dashboard Container */
+.dashboard-container {
+    grid-column: 2 / 3; /* Tetap di kolom kedua */
+    grid-row: 2; /* Tetap di baris kedua */
+    margin-top: -265px;
+    padding: 15px;
+    border-radius: 12px; /* Pastikan sudut membulat */
+    width: 800px; /* Setel lebar maksimum eksplisit */
+    overflow: hidden; /* Hilangkan overflow jika tidak diperlukan */
+    height: 360px;
+    margin-left: -640px;
+    background-clip: padding-box; /* Memastikan sudut terlihat */
+    position: relative; /* Pastikan elemen tetap dalam aliran */
+    box-sizing: border-box; /* Pastikan padding tidak mengganggu */
+    background-color: #ffffff;
+}
+
+
+/* Konten di dalam Dashboard Container */
+.dashboard-container .content {
+    display: flex; /* Gunakan Flexbox untuk tata letak responsif */
+    gap: 20px; /* Tambahkan jarak antar elemen */
+    flex-wrap: wrap; /* Izinkan elemen membungkus ke baris berikutnya */
+}
+
+/* Elemen Individual */
+.dashboard-container .item {
+    flex: 1 1 calc(33.33% - 20px); /* Elemen akan menyesuaikan ukuran */
+    width: 300px;/* Tetapkan lebar minimum */
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Pusatkan teks */
+    transition: transform 0.3s ease;
+}
+
+.dashboard-container .item:hover {
+    transform: scale(1.05); /* Tambahkan efek hover */
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr; /* Dua kolom */
+    grid-template-rows: auto auto auto; /* Tiga baris */
+    gap: 0px;
+    padding: 10px;
+}
+
+
+.sidebar {
+    margin-top: -60px;
+    grid-column: 3 / 4;
+    grid-row: 1 / span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Jarak antar elemen */
+    align-items: stretch;
+    margin-left: 50px; /* Kurangi margin kiri untuk melebarkan ke kiri */
+    transform: translateX(-20px); /* Geser lebih jauh ke kiri */
+    padding: 10px; /* Ruang dalam lebih lega */
+    width: 390px;
+    min-width: 250px; /* Lebar minimum */
+    max-width: 600px; /* Lebar maksimum */
+    background-color: #5473ff; /* Warna latar */
+    border-radius: 12px; /* Sudut lembut */
+   
+}
+
+.kalender {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    width: 370px;
+    text-align: center;
+
+}
+
+.kalender-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.kalender h3 {
+    font-size: 20px;
+    color: #5473ff;
+    margin: 0;
+}
+
+.kalender-header button {
+    background-color: #5473ff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.kalender-header button:hover:not(:disabled) {
+    background-color: #5473ff;
+}
+
+.kalender-header button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #555;
+}
+
+.calendar-table thead th {
+    color: #94b7f9;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.calendar-table tbody td {
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.calendar-table tbody td:hover {
+    background-color: #94b7f9;
+}
+
+.calendar-table tbody td.highlight {
+    background-color: #5473ff;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-table tbody td:empty {
+    cursor: default;
+    background-color: transparent;
+}
+
+.informasi-akademik {
+    background-color: #ffffff; /* Warna latar putih */
+    border-radius: 12px; /* Sudut membulat */
+    padding: 20px; /* Padding elemen */
+  
+}
+
+.informasi-akademik h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #5473ff;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.whatsapp-logo {
+  
+   
+margin-left: 50px;  
+
+
+}
+/* Styling untuk gambar profil */
+.profile-pic {
+    width: 60px; /* Ukuran lingkaran */
+    height: 60px;
+    background-color: #ccc; /* Placeholder jika gambar tidak ada */
+    border-radius: 50%; /* Membuat lingkaran */
+    background-size: cover; /* Gambar memenuhi lingkaran */
+    background-position: center; /* Memastikan gambar berada di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #94b7f9; /* Border putih bundar */
+    
+}
+
+/* Gambar untuk masing-masing profil */
+.profile-pic1 {
+    background-image: url('img/bapak1.jpg'); /* Path harus benar */
+}
+
+.profile-pic2 {
+    background-image: url('img/bapak2.jpeg'); /* Path harus benar */
+}
+
+/* Info profil */
+.profile-info .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #5473ff;
+}
+
+.profile-info .role {
+    font-size: 14px;
+    color: #94b7f9;
+    margin: 0;
+}
+
+.contact-link img {
+    width: 24px;
+    height: 24px;
+}
+
+.user-profile {
+    display: flex; /* Gunakan flexbox untuk tata letak horizontal */
+    align-items: center; /* Pusatkan vertikal elemen */
+    padding: 20px; /* Berikan ruang dalam */
+    border-radius: 12px; /* Sudut lembut */
+    gap: 15px; /* Jarak antara avatar dan teks */
+    
+}
+
+/* Avatar atau Foto Profil */
+.user-profile .avatar {
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-image: url('img/profile.jpg');
+    background-size: cover; /* Pastikan gambar memenuhi lingkaran */
+    background-position: center;
+    border: 4px solid #ffffff; /* Border putih */
+}
+
+
+/* Konten Teks di User Profile */
+.user-profile .user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Jarak antar teks */
+}
+
+.user-profile .user-details h3 {
+    font-size: 20px; /* Ukuran nama */
+    margin: 0;
+    color: #fff; /* Warna teks gelap */
+}
+
+.user-profile .user-details p {
+        font-size: 14px; /* Ukuran teks kecil */
+        margin: 0;
+        margin-bottom: -2px; /* Jarak vertikal antar paragraf */
+        color: #ffffff; /* Warna abu-abu lembut */
+        letter-spacing: 0.3px; /* Jarak antar huruf */
+        line-height: 1.2; /* Jarak antar baris teks */
+    }
+    
+
+
+
+.user-profile .user-details .progress {
+    font-size: 16px; /* Ukuran teks progress */
+    color: #333; /* Warna teks lebih gelap */
+    border-top: 1px solid #ddd; /* Garis bawah progress */
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+
+.pengumuman {
+    background-color: #ffffff; /* Warna latar putih */
+    border-radius: 12px; /* Sudut membulat */
+    padding: 20px; /* Padding untuk isi */
+    margin-top: -230px; /* Jarak vertikal */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    margin-left: 150px;
+    width: 500px;
+    height: 210px;
+}
+
+.pengumuman h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #5473ff;
+    font-weight: bold;
+}
+
+.announcement-list {
+    list-style: none; /* Hilangkan tanda bullet */
+    padding: 0;
+    margin: 0;
+   
+}
+
+.announcement-list li {
+    display: flex;
+    justify-content: space-between; /* Tata tanggal dan detail */
+    padding: 10px 0;
+    border-bottom: 1px solid #5473ff; /* Garis pembatas antar pengumuman */
+    font-size: 14px;
+   
+}
+
+.announcement-list li:last-child {
+    border-bottom: none; /* Hilangkan garis pada item terakhir */
+}
+
+.date {
+    font-weight: bold;
+    color: #94b7f9;
+}
+
+.details {
+    color: #5473ff;
+    text-align: right;
+    font-size: 14px;
+}
+
+.see-more-btn {
+    margin-top: 15px;
+    background-color: #5473ff; /* Warna hijau tombol */
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: #45a049; /* Warna hijau saat hover */
+}
+
+
+/* Status Details */
+.status-details {
+    padding: 30px; /* Perbesar padding untuk memberi ruang lebih */
+    border-radius: 12px; /* Buat sudut lebih lembut */
+    width: 100%;
+    max-width: 900px; /* Perbesar lebar maksimal */
+    margin: 30px auto; /* Tambahkan jarak margin */
+    overflow: hidden;
+    margin-top: -50px; /* Jarak lebih nyaman dari elemen atas */
+}
+
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 0; /* Sesuaikan dengan perubahan */
+}
+
+.status-summary {
+    display: flex;
+    flex-wrap: wrap; /* Tetap membungkus elemen jika ruang tidak cukup */
+    gap: 20px; /* Perbesar jarak antar elemen */
+}
+
+.status-item {
+    flex: 1; /* Elemen fleksibel sesuai ruang */
+    min-width: 150px; /* Lebar minimum lebih besar */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 20px; /* Tambahkan margin antar elemen */
+}
+
+.status-item h2 {
+    font-size: 48px; /* Perbesar angka */
+    color: #94b7f9;
+    margin-bottom: 8px; /* Tambahkan jarak ke deskripsi */
+    display: inline-flex;
+    align-items: baseline;
+    gap: 5px; /* Jarak kecil antara angka dan teks */
+}
+
+.status-item h2 span {
+    font-size: 20px; /* Ukuran teks lebih besar */
+    color: #777; /* Warna lebih halus */
+    font-weight: normal;
+    margin-left: 8px; /* Tambahkan jarak dari angka */
+}
+
+.status-item p {
+    font-size: 16px; /* Perbesar ukuran teks deskripsi */
+    color: #5473ff; /* Warna lebih gelap */
+    margin-top: 5px; /* Jarak lebih nyaman */
+    font-weight: bold;
+}
+
+
+
+/* Toggle Button (Lihat Rincian) */
+.toggle-details {
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-details:hover {
+    color: #373A5D;
+}
+
+/* Details Scrollable */
+.details-scrollable {
+    max-height: 200px;
+    overflow-y: auto; /* Pastikan elemen memiliki scroll jika konten melampaui */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.details-scrollable::-webkit-scrollbar {
+    width: 8px;
+}
+
+.details-scrollable::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.detail-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.detail-section h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #5473ff;
+}
+
+.doc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.doc-item:hover {
+    background-color: #ececec;
+}
+
+.doc-item p {
+    font-size: 14px;
+    color: #555;
+    flex-grow: 1;
+}
+
+.doc-item small {
+    font-size: 12px;
+    color: #888;
+}
+
+.doc-item .status-icon {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.diterima .status-icon {
+    color: #4caf50;
+}
+
+.proses .status-icon {
+    color: #ff9800;
+}
+
+.ditolak .status-icon {
+    color: #f44336;
+}
+
+
+
+/* Schedule Section */
+.schedule-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule-section li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+    width: 100%; /* Lebar penuh */
+    padding: 20px;
+    background-color: #3a3a3a; /* Warna background */
+    border-radius: 8px; /* Sudut melengkung */
+    margin: 20px auto; /* Jarak di atas dan bawah */
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center; /* Teks di tengah */
+    color: #373A5D;
+}
+
+.contact-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex; /* Gunakan Flexbox untuk tata letak */
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-section li .icon {
+    font-size: 20px; /* Ukuran ikon */
+    color: #4caf50; /* Warna ikon */
+}
+
+.contact-section li .text {
+    flex-grow: 1; /* Isi ruang yang tersedia */
+}
+
+.nav-button.back-button {
+    width: 25px; /* Ukuran lebih kecil */
+    height: 25px; /* Ukuran lebih kecil */
+    background-color: transparent; /* Hilangkan warna dasar */
+    background-image: url('img/logout.png'); /* Ganti dengan gambar logo */
+    background-size: cover; /* Pastikan gambar memenuhi area */
+    background-repeat: no-repeat;
+    border: none; /* Hilangkan border */
+    cursor: pointer; /* Ubah kursor jadi pointer */
+    position: fixed; /* Tetapkan posisi tetap di layar */
+    top: 10px; /* Jarak dari atas */
+    right: 10px; /* Jarak dari kanan */
+    z-index: 1000; /* Pastikan elemen berada di atas */
+    transform: translate(0, 0); /* Penyesuaian tambahan jika perlu */
+}
+
+.nav-button.back-button:hover {
+    opacity: 0.8; /* Efek hover */
+    transition: opacity 0.3s ease;
+}
+
+.back-logo {
+    margin-left: 1350px;
+    margin-top: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .status-container {
+        flex-direction: column;
+    }
+
+    .contact-section {
+        padding: 15px;
+    }
+    .contact-section h2 {
+        font-size: 20px;
+    }
+    .contact-section li {
+        font-size: 14px;
+    }
+
+    .pengumuman {
+        margin-left: 0; /* Reset margin untuk layar kecil */
+    }
+}
